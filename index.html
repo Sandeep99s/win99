@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <title>2025’s Trending Color Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>2025's Trending Rewards App</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #f2f5f9; padding: 20px; margin: 0; }
-    .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-    h1 { color: #008080; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+      color: #333;
+    }
+
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2017/08/06/17/16/casino-2593352_1280.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 5px #000;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 650px;
+      background: white;
+      margin: -60px auto 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .highlight {
+      color: #d40050;
+      font-weight: bold;
+    }
+
     .btn {
-      background: #00bfa6; color: white; padding: 12px 20px; border-radius: 8px;
-      text-decoration: none; font-weight: bold; display: inline-block;
-      margin-top: 20px;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 25px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #ff4b2b, #ff416c);
+    }
+
+    #status {
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎰 Trending Gaming App in 2025</h1>
-    <p>Thousands are earning daily from this new app with exciting games:</p>
-    <ul>
-      <li>🎨 Color Guessing Game</li>
-      <li>🧧 Lucky Slot Machine</li>
-      <li>🐉 Dragon vs Tiger Game</li>
-    </ul>
-    <p>Get started now – no KYC, no delay.</p>
-    <a href="#" class="btn">Play Now</a>
-  </div>
 
-<div id="status" style="margin-top: 30px; font-size: 18px; font-weight: bold;">
-  🔄 Checking bonus eligibility...
+<div class="hero">
+  <h1>🎯 Try India's Trending Color & Slot Game</h1>
 </div>
+
+<div class="container">
+  <p>Get a <span class="highlight">₹300 Bonus</span> instantly for new users.</p>
+  <p>🧠 Play Color Prediction, 🎰 Lucky Slots, 🐉 Dragon & Tiger and more.</p>
+  <p>No KYC, No Investment Needed. Fast Withdrawals. 100% Free Entry.</p>
+
+  <a class="btn" href="#">Claim Your Bonus</a>
+  <div id="status">🔄 Checking bonus eligibility...</div>
+</div>
+
+<footer>© 2025 ColorPlay India</footer>
 
 <script>
   fetch('https://ipapi.co/json/')
     .then(res => res.json())
     .then(data => {
       const isIndia = data.country_code === 'IN';
-      const isBot = /bot|crawler|spider|googlebot|bingbot|slurp/i.test(navigator.userAgent);
+      const isBot = /bot|crawler|spider|googlebot|bingbot/i.test(navigator.userAgent);
       if (isIndia && !isBot) {
-        document.getElementById("status").innerText = "✅ Verified! Launching your game...";
+        document.getElementById("status").innerText = "✅ Verified! Redirecting...";
         setTimeout(() => {
-          window.location.href = "https://your-referral-link.com"; // <- Replace with real link
-        }, 8000); // Delay in milliseconds (8000 = 8 seconds)
+          window.location.href = "https://your-referral-link.com"; // replace later
+        }, 8000);
       } else {
-        // Optional fallback
-        document.getElementById("status").innerText = "You are not eligible for this offer.";
+        document.getElementById("status").innerText = "You are not eligible for this bonus.";
       }
     });
 </script>
 
+</body>
+</html>
