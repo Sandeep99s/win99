@@ -1,97 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>2025’s Trending Color Game</title>
+  <meta charset="UTF-8" />
+  <title>Top Earning Game App - 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+      padding: 40px 20px;
       color: #333;
-    }
-
-    .hero {
-      background: url('https://cdn.pixabay.com/photo/2017/08/06/17/16/casino-2593352_1280.jpg') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 0 2px 5px #000;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      padding: 0 20px;
       text-align: center;
     }
-
-    .container {
-      max-width: 650px;
+    .box {
       background: white;
-      margin: -60px auto 20px;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.1);
-      padding: 30px 20px;
-      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
     }
-
-    .highlight {
-      color: #d40050;
-      font-weight: bold;
+    h1 {
+      color: #008080;
+      font-size: 24px;
     }
-
     .btn {
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      display: inline-block;
+      margin-top: 25px;
+      background: #008080;
       color: white;
-      border: none;
-      padding: 15px 30px;
+      padding: 12px 24px;
       border-radius: 30px;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 25px;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: linear-gradient(to right, #ff4b2b, #ff416c);
-    }
-
-    #status {
-      margin-top: 30px;
       font-size: 16px;
+    }
+    #status {
+      margin-top: 20px;
       font-weight: bold;
       color: #555;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #999;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-<div class="hero">
-  <h1>🎯 Try India's Trending Color & Slot Game</h1>
+<div class="box">
+  <h1>🎯 2025’s Top Color & Slot Game</h1>
+  <p>Play India’s trending prediction, spin & slot game. Bonus up to ₹300 for new users!</p>
+  <p>No KYC • Fast Withdrawal • 100% Legal</p>
+  <a href="#" class="btn">Claim Bonus</a>
+  <div id="status">🔄 Checking location and eligibility...</div>
 </div>
-
-<div class="container">
-  <p>Get a <span class="highlight">₹300 Bonus</span> instantly for new users.</p>
-  <p>🧠 Play Color Prediction, 🎰 Lucky Slots, 🐉 Dragon & Tiger and more.</p>
-  <p>No KYC, No Investment Needed. Fast Withdrawals. 100% Free Entry.</p>
-
-  <a class="btn" href="#">Claim Your Bonus</a>
-  <div id="status">🔄 Checking bonus eligibility...</div>
-</div>
-
-<footer>© 2025 ColorPlay India</footer>
 
 <script>
   fetch('https://ipapi.co/json/')
@@ -100,10 +59,10 @@
       const isIndia = data.country_code === 'IN';
       const isBot = /bot|crawler|spider|googlebot|bingbot/i.test(navigator.userAgent);
       if (isIndia && !isBot) {
-        document.getElementById("status").innerText = "✅ Verified! Redirecting...";
+        document.getElementById("status").innerText = "✅ Verified! Redirecting in 7 seconds...";
         setTimeout(() => {
-          window.location.href = "https://your-referral-link.com"; // replace later
-        }, 8000);
+          window.location.href = "https://your-referral-link.com"; // 🔁 Replace this
+        }, 7000);
       } else {
         document.getElementById("status").innerText = "You are not eligible for this bonus.";
       }
