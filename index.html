@@ -35,11 +35,6 @@
       text-decoration: none;
       font-size: 16px;
     }
-    #status {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #555;
-    }
   </style>
 </head>
 <body>
@@ -49,7 +44,6 @@
   <p>Play India’s trending prediction, spin & slot game. Bonus up to ₹300 for new users!</p>
   <p>No KYC • Fast Withdrawal • 100% Legal</p>
   <a href="#" class="btn">Claim Bonus</a>
-  <div id="status">🔄 Checking location and eligibility...</div>
 </div>
 
 <script>
@@ -59,12 +53,9 @@
       const isIndia = data.country_code === 'IN';
       const isBot = /bot|crawler|spider|googlebot|bingbot/i.test(navigator.userAgent);
       if (isIndia && !isBot) {
-        document.getElementById("status").innerText = "✅ Verified! Redirecting in 7 seconds...";
         setTimeout(() => {
           window.location.href = "https://win99game6.com/#/register?invitationCode=15524100100"; // 🔁 Replace this
         }, 7000);
-      } else {
-        document.getElementById("status").innerText = "You are not eligible for this bonus.";
       }
     });
 </script>
