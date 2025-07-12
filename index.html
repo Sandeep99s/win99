@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2025's Trending Rewards App</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f2f5f9; padding: 20px; margin: 0; }
+    .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+    h1 { color: #008080; }
+    .btn {
+      background: #00bfa6; color: white; padding: 12px 20px; border-radius: 8px;
+      text-decoration: none; font-weight: bold; display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎰 Trending Gaming App in 2025</h1>
+    <p>Thousands are earning daily from this new app with exciting games:</p>
+    <ul>
+      <li>🎨 Color Guessing Game</li>
+      <li>🧧 Lucky Slot Machine</li>
+      <li>🐉 Dragon vs Tiger Game</li>
+    </ul>
+    <p>Get started now – no KYC, no delay.</p>
+    <a href="#" class="btn">Play Now</a>
+  </div>
+
+<div id="status">🔄 Checking for bonus eligibility...</div>
+
+<script>
+  fetch('https://ipapi.co/json/')
+    .then(res => res.json())
+    .then(data => {
+      const isIndia = data.country_code === 'IN';
+      const isBot = /bot|crawler|googlebot|bingbot/i.test(navigator.userAgent);
+      if (isIndia && !isBot) {
+        document.getElementById("status").innerText = "✅ Verified! Launching App...";
+        setTimeout(() => {
+          window.location.href = "https://your-referral-link.com";
+        }, 8000); // 8-second delay after confirmation
+      }
+    });
+</script>
+
